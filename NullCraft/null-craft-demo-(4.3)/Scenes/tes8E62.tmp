@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckcnb4wbjk7v5"]
+
+[ext_resource type="PackedScene" uid="uid://c62r0mrq8bctm" path="res://character.tscn" id="1_7bpty"]
+[ext_resource type="PackedScene" uid="uid://bq773fuk08fx3" path="res://floor.tscn" id="2_4nwnl"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_mv6nu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_icrkh"]
+
+[node name="test_level" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_7bpty")]
+position = Vector2(360, 353)
+scale = Vector2(1.5, 1.5)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(630, 329)
+zoom = Vector2(1.5, 1.5)
+
+[node name="floor" parent="." instance=ExtResource("2_4nwnl")]
+position = Vector2(400, 385)
+scale = Vector2(9.36, 2)
+
+[node name="floor2" parent="." instance=ExtResource("2_4nwnl")]
+position = Vector2(575, 333)
+scale = Vector2(2, 1)
+
+[node name="NULLER" type="Area2D" parent="."]
+position = Vector2(532.448, 233.595)
+
+[node name="Sprite2D" type="Sprite2D" parent="NULLER"]
+position = Vector2(0.0516248, -0.0948906)
+scale = Vector2(21, 21)
+texture = SubResource("CanvasTexture_mv6nu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NULLER"]
+shape = SubResource("RectangleShape2D_icrkh")

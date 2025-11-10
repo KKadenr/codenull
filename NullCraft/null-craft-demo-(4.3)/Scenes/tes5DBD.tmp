@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckcnb4wbjk7v5"]
+
+[ext_resource type="PackedScene" uid="uid://c62r0mrq8bctm" path="res://character.tscn" id="1_7bpty"]
+[ext_resource type="PackedScene" uid="uid://bq773fuk08fx3" path="res://floor.tscn" id="2_4nwnl"]
+
+[node name="test_level" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_7bpty")]
+position = Vector2(436, 403)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(630, 329)
+zoom = Vector2(1.5, 1.5)
+
+[node name="floor" parent="." instance=ExtResource("2_4nwnl")]
+position = Vector2(535, 497)
